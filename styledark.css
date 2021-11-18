@@ -1,0 +1,87 @@
+body {
+	background-color: #202020;
+}
+
+#slidebar {
+	background-color: #202020;
+}
+
+#slidebar span {
+	color: white;
+}
+
+#nav {
+	background-color: #202020;
+}
+
+#mainvideo {
+	background-color: #181818;
+}
+
+#mic {
+	background-color: black;
+	color: white;
+}
+
+.topicon:hover{
+	background-color: #181818;
+}
+
+#slidebar .material-icons-outlined {
+	color: white;
+}
+
+hr {
+    border-top: 1px solid #303030;
+}
+
+#searchinput {
+	background-color: black;
+	color: white;
+	border-color: #303030;
+}
+
+#buttonsearch {
+	background-color: #313131;
+	color: white;
+	border: 1px solid #303030;
+}
+
+.tag {
+	border-color: #4B4B4B;
+	color: white;
+	background-color: #373737;
+}
+
+.active {
+	border-color: #4B4B4B;
+	color: black;
+	background-color: white;
+}
+
+.tag:hover {
+	background-color: #4D4D4D;
+}
+
+.title {
+	color: white;
+}
+
+#Infoauthor p {
+	color: orange;
+}
+
+#Infoauthor label {
+	color: white;
+}
+
+#modelight {
+	color: white;
+}
+
+#currentpage span {
+	color: white;
+}
+
+
+
