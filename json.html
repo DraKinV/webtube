@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OurCTube Tool</title>
+	<style type="text/css">
+		body {
+			background-color: #202020;
+			color: white;
+			font-size: 25px;
+		}
+
+		#jsonfile {
+			width: 50%;
+			float: left;
+		}
+		#managevideo {
+			width: 50%;
+			float: right;
+			display: flex;
+			text-align: center;
+			justify-content: center;
+		}
+		#jsonfile .choosebuttonvideo {
+			background-color: rgba(168, 121, 50,0.5);
+			color: white;
+			border-style: solid;
+			border-radius: 10px;
+			font-size: 18px;
+			padding: 10px;
+			border-color: rgba(255,255,255,0.5);
+			min-width: 100%;
+			margin: 15px;
+			text-align: left;
+		}
+		.choosebuttonvideo {
+			cursor: pointer;
+		}
+
+		#audiobutton {
+			background-color: transparent;
+			color: darkorange;
+			border-width: 0;
+			position: absolute;
+			right: 250px;
+			top: 15px;
+		}
+		#audiobutton span {
+			font-size: 50px;
+		}
+
+		#audiobutton span:hover {
+			cursor: pointer;
+		}
+
+		.openyoutube {
+			position: absolute;
+			width: 50px !important;
+			height: auto !important;
+			transform: translate(100px,-100px);
+			display: none;
+		}
+
+		.openyoutube:hover {
+			display: flex;
+		}
+
+		.video {
+			border-width: 5px;
+			border-color: white;
+			border-style: solid;
+			border-radius: 5px;
+			margin-top: 100px;
+		}
+
+		.video img:hover + img{
+			display: flex;
+		}
+
+		.channel {
+			cursor: pointer;
+		}
+		.video img {
+			width: 285px;
+		}
+
+		.channel {
+			float: left;
+			height: 35px !important;
+			width: 35px !important;
+			clip-path: circle();
+		}
+
+		.info {
+			margin-top: 5px;
+			width: 270px;
+			text-align: left;
+		}
+
+		.title {
+			font-family: "Roboto", "Arial", sans-serif;
+			font-weight: bold;
+			font-size: 14px;
+
+		}
+
+		.infoad p {
+			margin-top: 5px !important;
+			font-family: Arial;
+			font-size: 12px;
+			margin-left: 10px;
+			color: #898989;
+
+		}
+		.material-icons-outlined:hover {
+			cursor: pointer;
+		}
+	</style>
+	<link
+	href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+	rel="stylesheet"
+	/>
+	<script type="text/javascript" src="script-music.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onload="AddNewElementsByJquery()">
+	<div id="jsonfile">
+		<ol id="olfile">
+		</ol>
+	</div>
+	<div id="managevideo">
+		<audio>
+			<source
+			src="https://media1.vocaroo.com/mp3/1n4BzMZUIMxH"
+			type="audio/ogg"/>
+		</audio>
+		<div class="nhacviet video">
+			<a id= "linkhrefyt" href="https://www.youtube.com/watch?v=GMyF41IxReo" target="_blank">
+				<img id="thumnailimg" src="https://i.ytimg.com/vi/GMyF41IxReo/maxresdefault.jpg" />
+				<img class="openyoutube" src="https://cdn.glitch.me/7a14764c-62e2-49cc-8a28-07a2ef5baa86%2Fopenyoutube.png?v=1636617685487">
+			</a>
+			<div class="info">
+				<img id="playvideo0" class="channel" src="https://icons-for-free.com/iconfiles/png/512/blue+control+go+music+pause+play+icon-1320185679167007716.png" onclick="play(0)"/>
+				<label class="title">Khuê Mộc Lan</label>
+				<div class="infoad">
+					<p>Hương Ly, Jombie</p>
+					<p>3:57</p>
+				</div>
+			</div>
+		</div>
+		<div>
+			<span class="material-icons-outlined" style="font-size: 50px; color: yellow; margin-top: 35px" onclick="edit()">edit</span>
+			
+			<span class="material-icons-outlined" style="font-size: 100px; color: #32a864; margin-top: 15px;position: absolute;right: 10px;top:10px" onclick="addvideoto()">add</span>
+		</div>
+	</div>
+	<script>
+var indexG = 0;
+function AddNewElementsByJquery() {
+  for (var index in titleVideo) {
+    $("#olfile").append(
+      '<li><button class="choosebuttonvideo" onclick="changedatavideo('+index+')">'+titleVideo[index]+'</button></li>'
+    );
+  }
+}
+
+function changedatavideo(indexCB) {
+	indexG = indexCB;
+	document.getElementById("linkhrefyt").href=linkyt[indexCB];
+	document.getElementById("thumnailimg").src=thumbnail[indexCB];
+}
+
+function edit() {
+	let chooseeditpp="";
+	while (chooseeditpp == null || chooseeditpp == "") {
+		chooseeditpp=window.prompt("Chọn thông tin muốn sửa\n1. Tên bài hát\n2. Tên ca sĩ\n3. Link youtube\n4. Ảnh bìa video\n5. Thời lượng video\n6. Link audio\n0. HỦY BỎ","");
+	}
+	let infoedit = "";
+	if (chooseeditpp == 1) {
+		chooseeditpp=window.prompt("Nhập tên bài hát muốn thay đổi","");
+	}
+	
+}
+
+function addvideoto() {
+  let namesong=window.prompt("(1/6)\nB1: Nhập tên bài hát","");
+  titleVideo.push(namesong);
+  file = fopen("C:\\Users\\ouin-ouin\\Downloads\\clone youtube\\script-music.js", 3);
+  str = fread(file,flength(file)) ;
+  fclose();
+  console.log (str);
+}
+
+
+	</script>
+</body>
+</html>
