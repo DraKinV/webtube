@@ -1,0 +1,87 @@
+body {
+	background-color: white;
+}
+
+#slidebar {
+	background-color: white;
+}
+
+#slidebar span {
+	color: black;
+}
+
+#nav {
+	background-color: white;
+}
+
+#mainvideo {
+	background-color: #F9F9F9;
+}
+
+#mic {
+	background-color: #F9F9F9 !important;
+	color: black !important;
+}
+
+.topicon:hover{
+	background-color: #F2F2F2 !important;
+}
+
+#slidebar .material-icons-outlined {
+	color: black !important;
+}
+
+hr {
+	border-top: 1px solid #E5E5E5 !important;
+}
+
+#searchinput {
+	background-color: white !important;
+	color: black !important;
+	border-color: #E5E5E5 !important;
+}
+
+#buttonsearch {
+	background-color: #F9F9F9 !important;
+	color: black !important;
+	border: 1px solid #E5E5E5 !important;
+}
+
+.tag {
+	border-color: #E5E5E5 !important;
+	color: black !important;
+	background-color: white !important;
+}
+
+.active {
+	border-color: #E5E5E5 !important;
+	color: white !important;
+	background-color: black !important;
+}
+
+.tag:hover {
+	background-color: #F2F2F2 !important;
+}
+
+.title {
+	color: black;
+}
+
+#Infoauthor p {
+	color: darkorange !important;
+}
+
+#Infoauthor label {
+	color: black !important;
+}
+
+#modelight {
+	color: black !important;
+}
+
+#currentpage span {
+	color: white !important;
+}
+
+
+
